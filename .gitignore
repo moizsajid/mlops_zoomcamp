@@ -1,2 +1,3 @@
 *.parquet
 project/__pycache__/*
+project/tests/__pycache__/*

@@ -5,7 +5,7 @@ import mlflow
 import pandas as pd
 from flask import Flask, jsonify, request
 
-RUN_ID = os.getenv("RUN_ID")
+RUN_ID = os.getenv("RUN_ID", "f0033d09b079439890630489db4b3f5c")
 
 os.environ["AWS_ACCESS_KEY_ID"] = os.getenv("AWS_ACCESS_KEY_ID")
 os.environ["AWS_SECRET_ACCESS_KEY"] = os.getenv("AWS_SECRET_ACCESS_KEY")

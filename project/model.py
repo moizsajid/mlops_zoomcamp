@@ -4,7 +4,7 @@ import pickle
 import mlflow
 import pandas as pd
 
-RUN_ID = os.getenv("RUN_ID")
+RUN_ID = os.getenv("RUN_ID", "f0033d09b079439890630489db4b3f5c")
 
 
 def load_pickle(filename):
