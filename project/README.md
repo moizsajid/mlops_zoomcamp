@@ -8,7 +8,7 @@ mlflow server -h 0.0.0.0 -p 5000 --backend-store-uri postgresql://mlflow:DB_PASS
 ```
 In the command, the `DB_PASSWORD` and `DB_ENDPOINT` have to be specified. For security reasons, these values have been removed. The `register_model.py` files select the best MLFlows run from the execution of the `hpo.py` file. The best performing model is registered in MLFlow
 
-For building the Docker image, the command below is used:
+For building the Docker image, the command below is used. This builds the Docker image from the `Dockerfile`.
 ```
 docker build -t car-price-prediction-service:v1 .
 ```
@@ -18,7 +18,8 @@ After building the image, the web service in runned on cloud using the Docker ru
 docker run -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e RUN_ID -it --rm -p 9696:9696 car-price-prediction-service:v1
 ```
 
-Once the above the web service is running, run for example the `test.py` file. This file processes a JSON car record so that it can be feed to the model.
+Once the above the web service is running, run for example the `test.py` file. This file processes a sample JSON car record so that it can be feed to the model. For further testing, tests are included in the `tests` folder. GitHub Action (CI pipeline) and pre commit hooks makes use of these tests. The Terraform files are included in the `infrastructure` folder.
 
 [1] [https://www.kaggle.com/code/giridharanp/car-price-prediction-ml/data](https://www.kaggle.com/code/giridharanp/car-price-prediction-ml/data)
+
 [2] [https://www.kaggle.com/code/giridharanp/car-price-prediction-ml/notebook](https://www.kaggle.com/code/giridharanp/car-price-prediction-ml/notebook)
