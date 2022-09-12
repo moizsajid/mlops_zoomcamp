@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+argparse = "==1.4.0"
+boto3 = "*"
+pandas = "==1.4.2"
+numpy = "*"
+category_encoders = "*"
+mlflow = "*"
+xgboost = "*"
+psutil = "==5.9.1"
+typing-extensions = "==4.2.0"
+scikit-learn = "==1.1.1"
+
+[dev-packages]
+pytest = "*"
+deepdiff = "*"
+pylint = "==2.14.4"
+black = "*"
+isort = "*"
+pre-commit = "*"
+
+[requires]
+python_version = "3.8"
