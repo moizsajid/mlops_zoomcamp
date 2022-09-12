@@ -1,0 +1,2 @@
+*.parquet
+project/__pycache__/*
